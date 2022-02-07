@@ -1,0 +1,106 @@
+.articles {
+  background-color: $VeryLightGray;
+  padding: 4em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+  }
+  .articles__text {
+    align-self: center;
+
+    @include breakpoint-up(medium) {
+      align-self: flex-start;
+      text-align: left;
+      padding-left: 10em;
+    }
+    @include breakpoint-up(large) {
+      padding-left: 11.5em;
+    }
+
+    h2 {
+      margin-bottom: 2.4375em;
+      font-size: 1.625rem;
+
+      @include breakpoint-up(medium) {
+        text-align: left;
+        font-size: 1.5625rem;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .wrapper {
+    margin: 0;
+    @include breakpoint-up(medium) {
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      grid-gap: 1.5rem;
+
+      @include breakpoint-up(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.875rem;
+      }
+
+      @include breakpoint-up(large) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .card {
+        background-color: $White;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 20.5625rem;
+        text-align: left;
+        margin: auto;
+        border-radius: 0.3125rem;
+
+        @include breakpoint-up(medium) {
+          width: 16rem;
+        }
+
+        img {
+          width: 20.5625rem;
+          height: 12.5625rem;
+          margin-bottom: 1.9375em;
+          border-radius: 0.3125rem;
+
+          @include breakpoint-up(medium) {
+            width: 16rem;
+          }
+        }
+
+        &__text {
+          padding: 0 1.9375em;
+          .arthur {
+            font-size: 0.5625rem;
+          }
+
+          h3 {
+            font-size: 0.875rem;
+            padding-top: 0.9375em;
+            font-weight: 400;
+          }
+
+          .description {
+            font-size: 0.75rem;
+            padding-bottom: 2.75em;
+            padding-top: 0.9375em;
+          }
+        }
+      }
+    }
+  }
+}
